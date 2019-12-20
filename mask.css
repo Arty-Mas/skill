@@ -1,6 +1,7 @@
 
+
 .h2 {
-    display: flex;
+display: flex;
 align-items: center;
 justify-content: center;
 font-family: Roboto;
@@ -21,5 +22,7 @@ font-weight: 200;
 font-size: 20px;
 line-height: 37px;
 text-align: center;
-width: 70%;
+width: 80%;
+margin: auto;
 }
+
