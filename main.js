@@ -7,10 +7,10 @@ var inputField = document.querySelector('inputField');
 document.getElementById('button').onclick = () => checkNum();           
 //Проверка введеного числа 1 - 100
 function checkNum() {
-    userInput = Number(inputField).value;
+    userInput = parseInt(document.gameR.inputField.value);
     if (userInput > 0 && userInput <= 100) {
-       checkAtt();
-    }
+        return (userInput);
+        }
     else  alert('Число вне диапазона');
     }
 //Попытка    
@@ -23,22 +23,26 @@ function checkAtt() {
 //Совпдает ли с рандомом    
 function runCheckNum() {
     if (userInput === randomNum) {
-        comparison.innerText = 'Угадал';
+        alert('да');
+        //comparison.innerText = 'Угадал';
         gameOver();
     }
-    else loh();
+    
 }
 //Проверка больше или меньше рандома    
 function loh() {    
     if (userInput > randomNum) {
-        comparison.innerText = 'Меньше';
+        alert('меньше');
+        //comparison.innerText = 'Меньше';
         checkNum();
     }
     else if (userInput < randomNum) {
-        comparison.innerText = 'Больше';
+        alert('больше');
+        //comparison.innerText = 'Больше';
         checkNum();
     }
     attempts++;
+  //  return;
 }
 //Конец игры
 function gameOver() {
